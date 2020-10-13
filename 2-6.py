@@ -18,8 +18,12 @@ while True:
     else:
         break
 
-p = []
+r = {}
 x = list(a[0][1])
-for y in range(len(x)):
-    p.append(a[y-1][1].items())
-print(p)
+for y in range(len(a)):
+    h = []
+    w = x[y]
+    for p in range(len(a)):
+        h.append((a[p][1]).get(w))
+    r.update({x[y]: h})
+print(r)
